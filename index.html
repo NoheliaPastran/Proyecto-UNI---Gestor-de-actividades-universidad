@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Gestor de Tareas Pro</h1>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="pending">Pendientes</button>
+                <button class="filter-btn" data-filter="completed">Completadas</button>
+            </div>
+        </header>
+        <main class="app-main">
+            <form id="task-form">
+                <input type="text" id="task-name" placeholder="Nombre de la tarea..." required>
+                <input type="text" id="task-desc" placeholder="Descripción...">
+                <input type="text" id="task-subject" placeholder="Materia...">
+                <input type="date" id="task-due-date">
+                <button type="submit">
+                    <i class="fas fa-plus"></i> Añadir
+                </button>
+            </form>
+            <ul id="task-list" class="task-list">
+                <!-- Las tareas se añadirán aquí dinámicamente -->
+            </ul>
+        </main>
+    </div>
+
+    <!-- Modal para Editar Tarea -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Editar Tarea</h2>
+            <form id="edit-form">
+                <input type="hidden" id="edit-task-id">
+                <label for="edit-task-name">Nombre:</label>
+                <input type="text" id="edit-task-name" required>
+                <label for="edit-task-desc">Descripción:</label>
+                <input type="text" id="edit-task-desc">
+                <label for="edit-task-subject">Materia:</label>
+                <input type="text" id="edit-task-subject">
+                <label for="edit-task-due-date">Fecha de Vencimiento:</label>
+                <input type="date" id="edit-task-due-date">
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
