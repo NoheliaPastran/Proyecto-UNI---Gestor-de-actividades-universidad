@@ -1,7 +1,6 @@
 # Gestor de Tareas Pro
 
-Este es un sencillo pero potente gestor de tareas diseñado para ayudarte a organizar tus actividades diarias y proyectos.
-
+Este es una pagina web diseñada para la gestión de tareas de tu universidad.
 ## Características
 
 *   **Añadir Tareas:** Crea nuevas tareas con un nombre, descripción, materia y fecha de vencimiento.
